@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @post %>
+<%= simple_form_for @post, wrapper: :disabled_form do |f| %>
+  <%= render "form", f: f, post: @post %>
+<% end %>
 
 <div>
   <%= link_to "Edit this post", edit_post_path(@post) %> |

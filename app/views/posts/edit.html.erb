@@ -1,6 +1,9 @@
 <h1>Editing post</h1>
 
-<%= render "form", post: @post %>
+<%= simple_form_for @post do |f| %>
+  <%= render "form", f: f, post: @post %>
+  <%= f.submit %>
+<% end %>
 
 <br>
 
